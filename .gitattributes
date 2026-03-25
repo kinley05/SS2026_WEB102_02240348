@@ -1,0 +1,14 @@
+* text=auto
+
+# Keep common source/config files in LF to avoid CRLF churn across OSes.
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.env text eol=lf
+
+# Windows scripts should keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

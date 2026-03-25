@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 // Error handler middleware (to be defined later)
 app.use(require('./middleware/errorHandler'));
-
+app.use(require('./middleware/formatResponse'));
 
 const PORT = process.env.PORT || 3000;
 

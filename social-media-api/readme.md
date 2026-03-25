@@ -19,24 +19,23 @@ Nodemon
 
 # Project Structure
 social-media-api/ 
-│ 
-├── controllers/ 
-   └── commentController.js
-   └── followersController.js
-   └── likeController.js
-   └── postController.js
-   └── userController.js
-├── middleware/
-├── node_modules/ 
-├── public/ 
-├── routes/ 
-├── config/ 
-├── utils/ 
-├── public/ 
-│ └── docs.html 
-├── server.js 
-├── .env 
-└── .gitignore
+controllers/ 
+ commentController.js
+ followersController.js
+ likeController.js
+ postController.js
+ userController.js
+middleware/
+node_modules/ 
+public/ 
+routes/ 
+config/ 
+utils/ 
+public/ 
+ docs.html 
+server.js 
+.env 
+.gitignore
 
 # Installation and setup
 1.clone or create project folder:
