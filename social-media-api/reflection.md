@@ -1,0 +1,2 @@
+# What I Learned 
+In this pratical, I learned how to design and implement RESTful APIs using Node.js and Express,. I understood about the importance of proper URI design, HTTP methods, and status code. I also learned how to structure a backend project in a clean and porganized way.
