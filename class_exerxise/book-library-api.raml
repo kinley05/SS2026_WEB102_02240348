@@ -1,0 +1,72 @@
+#%RAML 1.0
+title: Book Library API
+version: v1
+baseUri: https://api.booklibrary.com/{version}
+mediaType: application/json
+
+types:
+  Book:
+    type: object
+    properties:
+      id:
+        type: string
+        example: "book-001"
+      title:
+        type: string
+        example: "1984"
+      author:
+        type: string
+        example: "George Orwell"
+      available:
+        type: boolean
+        example: true
+
+/books:
+  get:
+    description: Get all books
+    responses:
+      200:
+        body:
+          application/json:
+            type: Book[]
+
+  post:
+    description: Add a new book
+    body:
+      application/json:
+        type: Book
+    responses:
+      201:
+        description: Book created
+
+/books/{bookId}:
+  uriParameters:
+    bookId:
+      type: string
+      description: Unique book ID
+  get:
+    description: Get a specific book
+    responses:
+      200:
+        body:
+          application/json:
+            type: Book
+      404:
+        description: Book not found
+
+/books/search:
+  get:
+    description: Search books by criteria
+    queryParameters:
+      genre:
+        type: string
+        required: false
+        example: "Fiction"
+      available:
+        type: boolean
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: Book[]
